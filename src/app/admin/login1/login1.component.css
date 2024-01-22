@@ -1,0 +1,21 @@
+/* Thông tin container */
+.info-container {
+    margin-top: 20px;
+}
+
+/* Tiêu đề thông tin */
+.info-container h2 {
+    color: #343a40;
+}
+
+/* Nội dung thông tin */
+.info-container p {
+    margin: 10px 0;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .info-container {
+        text-align: center;
+    }
+}

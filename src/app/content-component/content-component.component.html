@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let product of products">
+      <div class="card h-100"> 
+        <a href="#">
+          <img src="{{product.thumbnail}}" class="card-img-top" alt="Product 1" />
+        </a>
+        <div class="card-body d-flex flex-column">
+          <h3><a href = "/product-detail/{{product.id}}">{{product.title}}</a></h3>
+          <p class="price">{{product.price}}</p>
+          <button class="sales btn btn-outline-danger mt-auto" *ngIf="product.sales; else notsale">
+            Sale
+          </button>
+          <ng-template #notsale>
+            <button class="btn btn-outline-danger mt-auto">
+              Mua ngay
+            </button>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
